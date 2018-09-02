@@ -26,9 +26,8 @@ header-img: "assets/img/tag-bg.jpg"
             <!-- 标签云 -->
 			<div id='tag_cloud' class="tags">
 				{% for tag in site.tags %}
-				<a href="#" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+				<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 				{% endfor %}
-				<a href="#" title="all" rel="0">All</a>
 			</div>
 
             <!--<blockquote class="tag-comments">
@@ -39,10 +38,10 @@ header-img: "assets/img/tag-bg.jpg"
 
             <!-- 标签列表 -->
 			{% for tag in site.tags %}
-			<div id="{{ tag[0] }}" class="one-tag-list">
-			  	<span class="fa fa-tag listing-seperator">
+			<div class="one-tag-list">
+			  	<span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
                     <span class="tag-text">{{ tag[0] }}</span>
-				</span>
+                </span>
 				{% for post in tag[1] %}
 				  <!-- <li class="listing-item">
 				  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
