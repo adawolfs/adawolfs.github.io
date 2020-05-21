@@ -10,7 +10,7 @@
       :linesWidth="0.6"
       :lineLinked="true"
       :lineOpacity="1"
-      :linesDistance="80"
+      :linesDistance="100"
       :moveSpeed="6"
       :hoverEffect="true"
       hoverMode="grab"
