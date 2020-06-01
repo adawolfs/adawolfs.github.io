@@ -28,7 +28,7 @@ export default {
     this.particlesScript = document.createElement("script");
     this.particlesScript.setAttribute(
       "src",
-      process.env.BASE_URL + "particles.js"
+      process.env.BASE_URL + "js/particles.js"
     );
     this.particlesScript.setAttribute("id", "particles-script-js");
     this.particlesScript.setAttribute("type", "module");
