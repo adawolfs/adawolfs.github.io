@@ -25,13 +25,18 @@ export default {
     };
   },
   mounted() {
-    const recaptchaScript = document.createElement("script");
-    recaptchaScript.setAttribute(
+    this.particlesScript = document.createElement("script");
+    this.particlesScript.setAttribute(
       "src",
-      "http://localhost:8080/js/particles.js"
+      process.env.BASE_URL + "particles.js"
     );
-    recaptchaScript.setAttribute("type", "module");
-    document.head.appendChild(recaptchaScript);
+    this.particlesScript.setAttribute("id", "particles-script-js");
+    this.particlesScript.setAttribute("type", "module");
+    document.head.appendChild(this.particlesScript);
+  },
+  beforeDestroy() {
+    const elem = document.getElementById("particles-script-js");
+    elem.parentNode.removeChild(elem);
   }
 };
 </script>
