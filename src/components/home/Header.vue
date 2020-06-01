@@ -44,7 +44,7 @@ import HeaderContent from "@/components/home/Content.vue";
 export default {
   name: "Header",
   data: () => ({
-    background: "3d"
+    background: "2d"
     // email: __GLOBAL__.email
   }),
   components: {
