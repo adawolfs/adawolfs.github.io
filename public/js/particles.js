@@ -1,6 +1,6 @@
 
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/build/three.module.js';
-
+import { DeviceOrientationControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/controls/DeviceOrientationControls.js';
 var container;
 
 var camera, scene, renderer;
@@ -14,10 +14,13 @@ var mouseY = 0;
 var totalParticles = 700;
 var minSpehereDist = 600;
 
+var controls
+
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
 document.addEventListener('mousemove', onDocumentMouseMove, false);
+
 
 init();
 animate();
@@ -28,6 +31,8 @@ function init() {
 
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 100000);
   camera.position.z = 3200;
+
+  controls = new DeviceOrientationControls(camera);
 
   scene = new THREE.Scene();
   var geometry = new THREE.SphereBufferGeometry(2, 32, 16);
@@ -81,7 +86,7 @@ function onDocumentMouseMove(event) {
 function animate() {
 
   requestAnimationFrame(animate);
-
+  controls.update();
   render();
 
 }
