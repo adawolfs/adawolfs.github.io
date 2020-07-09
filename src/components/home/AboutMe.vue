@@ -98,6 +98,8 @@ export default {
           break;
         case "ping":
           this.script = "pong";
+        case "beer":
+          this.script = "mmmmm beeeer!";
         default:
           this.script = "";
       }
