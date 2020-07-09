@@ -89,13 +89,16 @@ export default {
     },
     onEnter() {
       command = this.script;
-      if (command == "hola") {
-        this.script = "adios";
-        return;
-      } else if (command == "time") {
-        this.script = new Date();
+      switch (command) {
+        case "hola":
+          this.script = "adios";
+          break;
+        case "time":
+          this.script = new Date();
+          break;
+        default:
+          this.script = "";
       }
-      this.script = "";
     }
   }
 };
