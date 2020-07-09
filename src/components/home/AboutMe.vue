@@ -96,6 +96,8 @@ export default {
         case "time":
           this.script = new Date();
           break;
+        case "ping":
+          this.script = "pong";
         default:
           this.script = "";
       }
