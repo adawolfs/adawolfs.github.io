@@ -92,6 +92,8 @@ export default {
       if (command == "hola") {
         this.script = "adios";
         return;
+      } else if (command == "time") {
+        this.script = new Date();
       }
       this.script = "";
     }
