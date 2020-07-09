@@ -88,6 +88,11 @@ export default {
       }
     },
     onEnter() {
+      command = this.script;
+      if (command == "hola") {
+        this.script = "adios";
+        return;
+      }
       this.script = "";
     }
   }
