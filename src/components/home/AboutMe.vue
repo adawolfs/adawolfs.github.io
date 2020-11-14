@@ -105,8 +105,11 @@ export default {
         case "beer":
           this.script = "mmmmm beeeer!";
           break;
+        case "404 command not found":
+          this.script = "";
+          break;
         default:
-          this.script = "Intenta nuevamente";
+          this.script = "404 Command Not Found";
       }
     },
   },
