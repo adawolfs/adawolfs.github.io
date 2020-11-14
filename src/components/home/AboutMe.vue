@@ -12,7 +12,10 @@
         class="magic-input"
       />
       <p id="subtitle">
-        <span>I'm a FullStack Developer with experience creating DevOps Pipelines</span>
+        <span
+          >I'm a FullStack Developer with experience creating DevOps
+          Pipelines</span
+        >
         <br />
         <span>Organizer of Kubernetes Guatemala an official CNCF Meetup</span>
         <br />
@@ -58,14 +61,14 @@
 export default {
   name: "AboutMe",
   data: () => ({
-    script: ""
+    script: "",
   }),
   directives: {
     focus: {
-      inserted: function(el) {
+      inserted: function (el) {
         el.focus();
-      }
-    }
+      },
+    },
   },
   methods: {
     focusInput(isVisible) {
@@ -88,7 +91,7 @@ export default {
       }
     },
     onEnter() {
-      command = this.script;
+      var command = this.script;
       switch (command) {
         case "hola":
           this.script = "adios";
@@ -103,8 +106,8 @@ export default {
         default:
           this.script = "";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
