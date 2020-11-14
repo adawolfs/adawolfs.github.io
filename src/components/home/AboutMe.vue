@@ -91,7 +91,7 @@ export default {
       }
     },
     onEnter() {
-      const command = this.script;
+      const command = this.script.toLowerCase();
       switch (command) {
         case "hola":
           this.script = "adios";
@@ -106,7 +106,7 @@ export default {
           this.script = "mmmmm beeeer!";
           break;
         default:
-          this.script = "";
+          this.script = "Intenta nuevamente";
       }
     },
   },

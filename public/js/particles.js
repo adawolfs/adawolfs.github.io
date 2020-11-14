@@ -154,14 +154,12 @@ function render() {
     }
   }
 
-  // if (!window.mobileCheck()) {
-  //   camera.position.x += (mouseX - camera.position.x) * .5;
-  //   camera.position.y += (- mouseY - camera.position.y) * .5;
-  //   camera.lookAt(scene.position);
-
-  // }
-
-
+  if (!window.mobileCheck()) {
+    camera.position.z = 3200;
+    camera.position.x += (mouseX - camera.position.x) * .5;
+    camera.position.y += (- mouseY - camera.position.y) * .5;
+    camera.lookAt(scene.position);
+  }
 
   renderer.render(scene, camera);
 
