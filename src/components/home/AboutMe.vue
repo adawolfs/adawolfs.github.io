@@ -91,7 +91,7 @@ export default {
       }
     },
     onEnter() {
-      var command = this.script;
+      let command = this.script;
       switch (command) {
         case "hola":
           this.script = "adios";
