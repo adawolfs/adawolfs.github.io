@@ -2,18 +2,30 @@
   <div class="main-title header">
     <h1>
       <span class="site-title">Alvin Estrada</span>
-      <span class="site-description">DevOps & Software Developer</span>
+      <span class="site-description">Speaker & Software Developer</span>
     </h1>
     <div class="header-icons">
       <a aria-label="Send email" :href="'mailto:' + $global.email">
-        <font-awesome-icon class="icon" :icon="['fas', 'envelope']" aria-hidden="true" />
+        <font-awesome-icon
+          class="icon"
+          :icon="['fas', 'envelope']"
+          aria-hidden="true"
+        />
       </a>
       <!--a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a-->
       <a aria-label="My Github" target="_blank" :href="$global.github">
-        <font-awesome-icon class="icon" :icon="['fab', 'github']" aria-hidden="true" />
+        <font-awesome-icon
+          class="icon"
+          :icon="['fab', 'github']"
+          aria-hidden="true"
+        />
       </a>
       <a aria-label="My Linkedin" target="_blank" :href="$global.linkedin">
-        <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" aria-hidden="true" />
+        <font-awesome-icon
+          class="icon"
+          :icon="['fab', 'linkedin']"
+          aria-hidden="true"
+        />
       </a>
     </div>
     <br />
@@ -23,9 +35,10 @@
         href="#about"
         @click.prevent
         v-smooth-scroll="{
-            updateHistory: false
-          }"
-      >About Me</a>
+          updateHistory: false,
+        }"
+        >About Me</a
+      >
       <a class="link" href="/blog">Blog</a>
     </div>
   </div>
