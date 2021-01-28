@@ -2,7 +2,7 @@
   <div class="main-title header">
     <h1>
       <span class="site-title">Alvin Estrada</span>
-      <span class="site-description">Software Developer</span>
+      <span class="site-description">Not an expert!</span>
     </h1>
     <div class="header-icons">
       <a aria-label="Send email" :href="'mailto:' + $global.email">
@@ -39,7 +39,9 @@
         }"
         >About Me</a
       >
+      <!--
       <a class="link" href="/blog">Blog</a>
+      -->
     </div>
   </div>
 </template>
