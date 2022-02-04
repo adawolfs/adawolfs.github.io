@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alvin Estrada - Web Developer</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div><a href="#">Inicio</a></div>
+        <div><a href="#profile">Profile</a></div>
+        <div><a href="#projects">Projects</a></div>
+    </nav>
+    
+    <header>
+        <a-scene class="mobile" loading-screen="dotsColor: white; backgroundColor: black" background="color: #000000" embedded debug>
+            <a-assets>
+                <img id="perfil" src="/img/profile_2.jpg">
+                <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/https://i.imgur.com/WqlqEkq.jpg"
+                    crossorigin="anonymous" />
+                <img id="grid" src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png"
+                    crossorigin="anonymous">
+            </a-assets>
+
+
+            <a-entity position="0 0 0" geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+                material="src: #grid; repeat: 10000 10000; transparent: true; metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;">
+            </a-entity>
+
+            <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+
+            <a-circle material="side: double;" src="#perfil" radius="4" position="0 4 -7" rotation="0 0 0">
+            </a-circle>
+
+            <a-entity position="2.5 0.5 -3" text="anchor: center; width: 10; color: white; side: double; value: '        Alvin Estrada
+                Cloud Architect and SRE ' ">
+            </a-entity>
+
+            <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera>
+            </a-entity>
+
+
+        </a-scene>
+
+        <a-scene class="desktop" loading-screen="dotsColor: white; backgroundColor: black" background="color: #000000" embedded debug>
+            <a-assets>
+                <img id="perfil" src="/public/img/profile_2.jpg">
+                <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/https://i.imgur.com/WqlqEkq.jpg"
+                    crossorigin="anonymous" />
+                <img id="grid" src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png"
+                    crossorigin="anonymous">
+            </a-assets>
+
+
+            <a-entity position="0 0 0" geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+                material="src: #grid; repeat: 10000 10000; transparent: true; metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;">
+            </a-entity>
+
+            <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+
+            <a-circle material="side: double;" src="#perfil" radius="4" position="-15 4 -10" rotation="0 0 0">
+            </a-circle>
+
+            <a-entity position="5 3 -6"
+                text="anchor: center; width: 20; color: white; side: double; value: Alvin Estrada - Cloud Architect and SRE">
+            </a-entity>
+            <a-entity position="1 0.2 -3.8"
+                text="anchor: center; width: 5; color: white; side: double; value: Use WASD keys">
+            </a-entity>
+
+            <a-entity position="0.6 0.1 -3.4"
+                text="anchor: center; width: 4; color: white; side: double; value: and your mouse to move">
+            </a-entity>
+
+            <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera>
+            </a-entity>
+
+        </a-scene>
+    </header>
+    <aside>
+
+        <article>
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i>Guatemala</li>
+                <li><i class="fas fa-phone"></i>+502 5630-2839</li>
+                <li><i class="fab fa-twitter"></i><a href="https://twitter.com/adawolfs">@adawolfs</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/adawolfs">@adawolfs</a></li>
+                <li><i class="fas fa-envelope"></i>adawolfs@gmail.com</li>
+                <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/alvin-estrada-868b22a5/">Alvin
+                        Estrada</a></li>
+            </ul>
+        </article>
+        <article>
+            <h3>Technologies</h3>
+            <ul>
+                <li>
+                    <i><span class="iconify" data-icon="logos:kubernetes"></span></i>
+                    Kubernetes
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-box"></i>
+                    OCI Container
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="flat-color-icons:linux"></span></i>
+                    Linux Admin
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="vscode-icons:file-type-jenkins"></span></i>
+                    Jenkins
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="vscode-icons:file-type-ansible"></span></i>
+                    Ansible
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3>Skills</h3>
+            <ul>
+                <li>
+                    <i class="fas fa-users"></i>
+                    Team Work
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="bi:translate"></span></i>
+                    English
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i>
+                    Googling
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </aside>
+    <section id="profile">
+        <article>
+            <p>
+                I'm an Engineer with a passion for Cloud Computing and DevOps. I have a background in Software
+                Development
+                and I'm currently working as a Consultant Cloud Architect and SRE for Walmart Central America, helping
+                with a culture transformation
+                about their development processes and cloud adoption.
+            </p>
+            <p>
+                I'm main speaker and organizer at Kubernetes Guatemala an official CNCF Meetup Group and I've also been
+                a speaker at and meetups talking about Kubernetes, DevOps, Cloud Computing and Machine Learning.
+            </p>
+            <p>
+                As hobby I like to play with Raspberry Pi, Arduino and other electronic gadgets. I also like to play
+                with 3D printers! I want to prove my self that if you can imagine it you can build it.
+
+                I like to contribute with national and international meetups to divulgate tech around the world!
+            </p>
+        </article>
+        <article>
+            <h3>Experience:</h3>
+            <ul>
+                <li>2021: <a href="https://www.bdgsa.net/">BDG</a>
+                    <p>
+                        I'm currently working as a Consultant Cloud Architect and SRE for Walmart Central America.
+                    </p>
+                </li>
+                <li>2017: <a href="https://proteon.com/">Proteon</a>
+                    <p>
+                        SRE and Architect for Enterprise solutions on premises and cloud, working primarily on Openshift
+                        and Kubernetes.
+                    </p>
+                </li>
+                <li>2013: <a href="https://www.digitalgeko.com/">Geko</a>
+                    <p>
+                        Full Stack Developer and Architect on Mobile, Web and Cloud based applications.
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3>Education:</h3>
+            <ul>
+                <li>I'm currently studying Systems Engineering at Universidad Mariano Galvez.</li>
+                <li>2019: Red Hat Certified Specialist in Openshift Administration</li>
+                <li>2019: Red Hat Certified System Administratior (RHCSA)</li>
+                <li>2011: Digital Electronics and Microprocesators Specializaiton at High School </li>
+            </ul>
+        </article>
+        <article>
+            <h3>Skills:</h3>
+            <ul>
+                <li>Team Working
+                    <p>
+                        I'm a team player and I'm always looking for new opportunities to learn and help my team mates
+                        to grow.
+                    </p>
+                </li>
+                <li>Critical Thinking
+                    <p>
+                        As self learner I'm always looking for new ways to improve myself and my skills and it demands a
+                        proper way to measuere and evaluate.
+                    </p>
+                </li>
+                <li>Continuous Improvement Philosophy
+                    <p>
+                        DevOps is just the result of continuous improvement implemented on a sistematic way for
+                        development processes. You have to be able to
+                        test yourself, measure yourself and improve yourself!
+                    </p>
+                </li>
+                <li>Google Oriented Developer
+                    <p>
+                        Well I've been involved on critial situations that were gracefully managed by a proper use of
+                        Google or a Search Engine.
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <article id="projects">
+            <h3>Projects:</h3>
+            <ul>
+                <li>
+                    <h4>IBM ACE Pipeline Automation</h4>
+                    <p>
+                        Implement a pipeline to deploy and configure IBM ACE using Ansible, Jenkins, Podman and Docker.
+                    </p>
+                </li>
+                <li>
+                    <h4>StrongSwan IP Sec VPN and Openshift Integration</h4>
+                    <p>
+                        Configure and automate VPN IPSec setup to dynamically connect Openshift Loads with Customer
+                        Private Network
+                    </p>
+                </li>
+                <li>
+                    <h4>Containerized CI/CD for Java Enterprise and Liferay</h4>
+                    <p>
+                        Jenkins CI/CD for Liferay sites development.
+                        Automated test, build and package for Java with Gradle, BASH and Docker.
+                        Deployment with Jenkins and Openshift Enterprise Kubernetes.
+
+                    </p>
+                </li>
+                <li>
+                    <h4>Site Eeliability Engineering for <a href="https://www.okd.io/">OKD</a> On-premises</h4>
+                    <p>
+                        Plan, Install and Operate multiple OKD clusters.
+                    <ul>
+                        <li>
+                            Plan and design OKD production architecture required compoents.
+                        </li>
+                        <li>
+                            Approvision architectural components for OKD instalation
+                        </li>
+                        <li>
+                            Configure Operative Systems and Network.
+                        </li>
+                        <li>
+                            Configure and Install OKD Enterprise Linux
+                        </li>
+                        <li>
+                            Configure and Install OKD
+                        </li>
+                        <li>
+                            Alert System with Prometheus/Grafaba and NAGIOS
+                        </li>
+                        <li>
+                            Logging and Metrics with <a href="https://www.elastic.co/what-is/elk-stack">ELK Stack</a>
+                        </li>
+                    </ul>
+                    </p>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <footer>
+        <div>Created by @adawolfs</div>
+        <div>Guatemala - 2022</div>
+    </footer>
+</body>
+
+</html>
