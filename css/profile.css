@@ -90,6 +90,10 @@ aside article ul li a {
     color: white;
 }
 
+.rust-logo svg path {
+    filter: invert(100%) ;
+}
+
 aside article ul li i {
     text-align: center;
     width: 30px;

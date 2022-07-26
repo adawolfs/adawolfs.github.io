@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Alvin Estrada - Cloud Architect</title>
+    <title>Alvin Estrada - Web Developer</title>
     <link rel="stylesheet" href="/css/profile.css">
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -12,7 +12,7 @@
 
 <body>
     <nav>
-        <div><a href="/">Home</a></div>
+        <div><a href="#">Inicio</a></div>
         <div><a href="#profile">Profile</a></div>
         <div><a href="#projects">Projects</a></div>
     </nav>
@@ -20,10 +20,10 @@
     <header>
         <a-scene class="mobile" loading-screen="dotsColor: white; backgroundColor: black" background="color: #000000" embedded debug>
             <a-assets>
-                <img id="perfil" src="/img/profile_3.jpg">
-                <img id="sky" src="/img/sky.jpg"
+                <img id="perfil" src="/img/profile_2.jpg">
+                <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/https://i.imgur.com/WqlqEkq.jpg"
                     crossorigin="anonymous" />
-                <img id="grid" src="/img/floor.png"
+                <img id="grid" src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png"
                     crossorigin="anonymous">
             </a-assets>
 
@@ -34,7 +34,7 @@
 
             <a-sky src="#sky" rotation="0 -90 0"></a-sky>
 
-            <a-circle material="side: double;" src="#perfil" radius="4" position="0 4 -10" rotation="0 0 0">
+            <a-circle material="side: double;" src="#perfil" radius="4" position="0 4 -7" rotation="0 0 0">
             </a-circle>
 
             <a-entity position="2.5 0.5 -3" text="anchor: center; width: 10; color: white; side: double; value: '        Alvin Estrada
@@ -49,7 +49,7 @@
 
         <a-scene class="desktop" loading-screen="dotsColor: white; backgroundColor: black" background="color: #000000" embedded debug>
             <a-assets>
-                <img id="perfil" src="/public/img/profile_3.jpg">
+                <img id="perfil" src="/img/profile_2.jpg">
                 <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/https://i.imgur.com/WqlqEkq.jpg"
                     crossorigin="anonymous" />
                 <img id="grid" src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png"
@@ -111,7 +111,7 @@
                     </div>
                 </li>
                 <li>
-                    <i><span class="iconify" data-icon="simple-icons:opencontainersinitiative"></span></i>
+                    <i class="fas fa-box"></i>
                     OCI Container
                     <div class="tech-rank">
                         <i class="check fas fa-circle"></i>
@@ -150,6 +150,77 @@
                         <i class="check fas fa-circle"></i>
                         <i class="check fas fa-circle"></i>
                         <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3>Languages</h3>
+            <ul>
+                <li>
+                    <i><span class="iconify" data-icon="logos:dart"></span></i>
+                    Dart
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="logos:gopher"></span></i>
+                    Go
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="logos:java"></span></i>
+                    Java
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="logos:javascript"></span></i>
+                    JS
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i><span class="iconify" data-icon="logos:python"></span></i>
+                    Python
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
+                    </div>
+                </li>
+                <li>
+                    <i class="rust-logo"><span class="iconify" data-icon="logos:rust"></span></i>
+                    Rust
+                    <div class="tech-rank">
+                        <i class="check fas fa-circle"></i>
+                        <i class="check fas fa-circle"></i>
+                        <i class="uncheck fas fa-circle"></i>
                         <i class="uncheck fas fa-circle"></i>
                         <i class="uncheck fas fa-circle"></i>
                     </div>
@@ -220,18 +291,37 @@
             <ul>
                 <li>2021: <a href="https://www.bdgsa.net/">BDG</a>
                     <p>
-                        I'm currently working as a Consultant Cloud Architect and SRE for Walmart Central America.
+                        Currently working as a Consultant Cloud Architect and SRE for Walmart Central America.
+                    </p>
+                    <p>
+                        Help with digital transformation and cloud adoption to improve product quality.
+                        <br>
+                        Work together with development, security and infrastructure teams to design and deliver several cloud based applications.
+                        <br>
+                        Design, implement and maintain several CI/CD pipelines on Linux Systems. 
                     </p>
                 </li>
                 <li>2017: <a href="https://proteon.com/">Proteon</a>
                     <p>
-                        SRE and Architect for Enterprise solutions on-premises and cloud, working primarily on Openshift
+                        SRE and Architect for Enterprise solutions on premises and cloud, working primarily on Openshift
                         and Kubernetes.
+                    </p>
+                    <p>
+                        Work with multiple teams on Netherlands, Germany, England and North America to deliver high quality software on top of Kubernetes and Openshift.
+                        <br>
+                        Design, implement and maintain several Containerized ecosystems with Jenkins, Kubernetes, ElasticSearch, Kibana, Prometheus and Grafana.
+                        <br>
+                        Design and implement multiple native kubernetes plugins to work together with other componentes and automate operation tasks.
                     </p>
                 </li>
                 <li>2013: <a href="https://www.digitalgeko.com/">Geko</a>
                     <p>
                         Full Stack Developer and Architect on Mobile, Web and Cloud based applications.
+                    </p>
+                    <p>
+                        Design, implement and maintain Java based applications with Play Framework and Android.
+                        <br>
+                        Integrate Firebase, Google Cloud and Multiple mobile technologies on top of finalcial applications anda                    
                     </p>
                 </li>
             </ul>
@@ -239,18 +329,10 @@
         <article>
             <h3>Education:</h3>
             <ul>
-                <li>
-                    <p>I'm currently studying Systems Engineering at Universidad Mariano Galvez.</p>
-                </li>
-                <li>
-                    <p>2019: Red Hat Certified Specialist in Openshift Administration</p>
-                </li>
-                <li>
-                    <p>2019: Red Hat Certified System Administratior (RHCSA)</p>
-                </li>
-                <li>
-                    <p>2011: Digital Electronics and Microprocessors Specialization at High School</p>
-                </li>
+                <li>2021: Got all required credits for Information Systems Engineering at Universidad Mariano Galvez.</li>
+                <li>2019: Red Hat Certified Specialist in Openshift Administration</li>
+                <li>2019: Red Hat Certified System Administratior (RHCSA)</li>
+                <li>2011: Digital Electronics and Microprocesators Specializaiton at High School </li>
             </ul>
         </article>
         <article>
@@ -293,10 +375,16 @@
                     </p>
                 </li>
                 <li>
+                    <h4>Automate legacy onpremises deployments</h4>
+                    <p>
+                        Implement Ansible, Jenkins, Containers and Podman to automate deployments on top of RedHat 8.
+                    </p>
+                </li>
+                <li>
                     <h4>StrongSwan IP Sec VPN and Openshift Integration</h4>
                     <p>
                         Configure and automate VPN IPSec setup to dynamically connect Openshift Loads with Customer
-                        Private Network
+                        Private Network.
                     </p>
                 </li>
                 <li>
@@ -309,7 +397,7 @@
                     </p>
                 </li>
                 <li>
-                    <h4>Site Reliability Engineering for <a href="https://www.okd.io/">OKD</a> On-premises</h4>
+                    <h4>Site Eeliability Engineering for <a href="https://www.okd.io/">OKD</a> On-premises</h4>
                     <p>
                         Plan, Install and Operate multiple OKD clusters.
                     <ul>
