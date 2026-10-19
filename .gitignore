@@ -31,3 +31,7 @@ yarn-error.log*
 
 /old
 /vuepress
+
+# Browser verification artifacts
+/test-results/
+/playwright-report/

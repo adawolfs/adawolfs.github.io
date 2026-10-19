@@ -1,0 +1,86 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      pages_build_type: ${{ steps.pages-source.outputs.build_type }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Build portfolio
+        run: npm run build
+        env:
+          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || '/' }}
+
+      - name: Install Chromium for interaction checks
+        run: npx playwright install --with-deps chromium --only-shell
+
+      - name: Verify desktop and mobile interactions
+        run: npm run test:e2e
+
+      - name: Detect existing Pages publishing source
+        id: pages-source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if build_type=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type'); then
+            echo "build_type=$build_type" >> "$GITHUB_OUTPUT"
+          else
+            echo "build_type=unconfigured" >> "$GITHUB_OUTPUT"
+          fi
+          if [ "${build_type:-unconfigured}" != "workflow" ]; then
+            echo "Build verified. Select GitHub Actions in Settings → Pages to enable artifact deployments. Existing branch publishing remains available." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && needs.build.outputs.pages_build_type == 'workflow'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
